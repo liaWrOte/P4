@@ -1,4 +1,4 @@
-# Three.js Journey
+# Sandrine M'ZE Portfolio
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
@@ -12,5 +12,5 @@ npm install
 npm run dev
 
 # Build for production in the dist/ directory
-npm run build
+npm run build 
 ```
