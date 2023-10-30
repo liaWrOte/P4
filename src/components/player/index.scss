@@ -1,0 +1,75 @@
+@import '../../assets/scss/vars';
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+//   position: absolute;
+//   width: 150px;
+  // top: -100px;
+  height: fit-content;
+  color: $beige;
+  justify-content: space-between;
+  align-items: center;
+  &.hide {
+    display: none;
+  }
+  .player-svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .title-container {
+    box-sizing: border-box;
+    padding: 1rem 1rem 0.5rem 1rem;
+    overflow: hidden;
+    color: $dark-brown;
+    .title {
+      font-size: 10px;
+      // text-overflow: ellipsis;
+      white-space: nowrap;
+      // overflow: hidden;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  .cover-container {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+    .cover {
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+ 
+  .player-controls {
+    width: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem 0;
+    img {
+        width: 18px;
+        height: 18px;
+        color: $yellow;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .main-controls {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.player-class {
+  position: relative
+}

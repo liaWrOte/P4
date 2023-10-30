@@ -1,0 +1,74 @@
+@import '../../assets/scss/vars';
+
+#hook {
+    position: relative;
+    // text-align: center;
+    z-index: 0;
+    padding: $xbig-gutter 0;
+    width: 100%;;
+    .hook-title {
+        display: block;
+        font-family: "staatliches";
+        margin-bottom: $big-gutter;
+        font-size: $font-size-big;
+        color: $light-brown;
+        text-align: center;
+    }
+    .hook-intro {
+        .hook-content {
+            margin-top: $small-gutter;
+            &:nth-of-type(even) {
+                text-align: right
+            }
+        }
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        margin: auto;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+        width:  230px;
+        height: 230px;
+        background-color: $yellow;
+        border-radius: 50%;
+        z-index: -1;
+        transform: scale(1);
+    }
+    &.before-animated {
+        &:before {
+            animation: pulse 0.5s ease-in;
+            @keyframes pulse {
+                0% { transform: scale(0.8); }
+                50% { transform: scale(1.5); }
+                100%{ transform: scale(1); }
+            }  
+        }
+    }
+    #sparkle {
+        display: block;
+        width: 5px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $yellow;
+        // border: 2px solid #f0f;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: top 0.5s ease-in, opacity 0.7s steps(6, end) 0.5s;
+        // transition: opacity 0.5s ease-in;
+        top: 100px;
+        opacity: 1;
+
+        &.sparkle-animate {
+            top: 500px;
+            opacity: 0;
+        }
+    }
+}

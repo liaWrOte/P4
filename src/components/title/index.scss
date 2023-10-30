@@ -1,0 +1,19 @@
+@import '../../assets/scss/vars';
+
+
+.title {
+    margin-top: $xxxbig-gutter;
+    margin-bottom: $xbig-gutter;
+    h2 {
+        .big-title {
+            font-family: 'staatliches';
+            color: $dark-brown;
+            font-size: $font-size-xxbig;
+        }
+        .small-title {
+            font-family: 'PT-serif-italic';
+            font-size: $font-size-big;
+            padding-left: $xbig-gutter
+        }
+    }
+}

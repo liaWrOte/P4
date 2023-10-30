@@ -1,0 +1,141 @@
+@import '../../scss/vars';
+
+
+#player-svg {
+  position: relative;
+  width: 50%;
+  image {
+    display: block;
+    // width: 100%;
+  }
+}
+
+// #disk {
+//   position: relative;
+// }
+
+.cls-1 {
+  fill: #5d161a;
+  stroke: #5d161a;
+}
+
+.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+  stroke-miterlimit: 10;
+}
+
+.cls-1, .cls-2, .cls-4, .cls-6 {
+  stroke-width: 8px;
+}
+
+.cls-2 {
+  fill: #7f2010;
+}
+
+.cls-2 {
+  stroke: #7f2010;
+}
+
+.cls-3, .cls-4, .cls-5 {
+  stroke: $yellow;
+}
+
+.cls-3 {
+  stroke-width: 12px;
+}
+
+.cls-3, .cls-4, .cls-5, .cls-6 {
+  fill: none;
+}
+
+.cls-5 {
+  stroke-width: 15px;
+}
+
+.cls-7 {
+  fill: #bd3018;
+  background-image: url('../../images/player/labi.jpeg');
+}
+
+.cls-6 {
+  stroke: #e6a934;
+  stroke-width: 4.5px;
+}
+
+#player-svg {
+  overflow: visible;
+  #reader {
+    right: 5px;
+    transform: rotate(0deg) translateX(-10px);
+    transform-origin: top right;
+    transition: transform 0.2s;
+  }
+  &.start {
+    #reader {
+      transform: rotate(-24deg) translateX(-10px);
+      transition: transform 0.2s;
+    }
+  }
+  &.playing {
+    position: relative;
+    #disk {
+        // animation-name: bounce;
+        // animation-duration: 1.5s;
+        // animation-iteration-count: infinite;
+        // transition: transform 0.2s;
+        image {
+          display: block;
+          position: relative;
+          transform-origin: calc(50% - 27.9px) 50%;
+          // transform: translateX(-10px);
+          animation: rotating 15s linear infinite;
+        }
+      }
+      #reader {
+        animation-name: alternate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        transition: transform 0.2s;
+        transform-origin: 70% 95%;
+      }
+    }
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes alternate {
+  0% {
+    transform: rotate(0deg) translateX(-10px);
+  }
+  50% {
+    transform: rotate(-7deg) translateX(8px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(-10px);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+

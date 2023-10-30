@@ -1,0 +1,61 @@
+/* CSS Variables */
+$dark-brown: #5D161A;
+$light-brown: #7F2010;
+$dark-red: #BD3018;
+$orange: #D45514;
+$yellow: #E6A934;
+$beige: #E8E1D7;
+$white: #ffffff;
+
+
+// fonts
+@font-face {
+    font-family: 'staatliches';
+    font-style: normal;
+    src: local('staatliches'), url(../fonts/staatliches/staatliches-latin-400-normal.woff) format('truetype');
+}
+@font-face {
+    font-family: 'PT-serif';
+    font-style: normal;
+    src: local('PT-serif'), url(../fonts/pt_serif/PT_Serif-Web-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'PT-serif-bold';
+    font-style: normal;
+    src: local('PT-serif-bold'), url(../fonts/pt_serif/PT_Serif-Web-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'PT-serif-bold-italic';
+    font-style: normal;
+    src: local('PT-serif-bold-italic'), url(../fonts/pt_serif/PT_Serif-Web-BoldItalic.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'PT-serif-italic';
+    font-style: normal;
+    src: local('PT-serif-italic'), url(../fonts/pt_serif/PT_Serif-Web-Italic.ttf) format('truetype');
+}
+
+//font-sizes
+$font-size-xxbig : 2.4rem;
+$font-size-xbig : 2.2rem;
+$font-size-big :1.8rem;
+$font-size-xnormal : 1.6rem;
+$font-size-normal : 1.4rem;
+$font-size-small : 1rem;
+$font-size-xsmall : 0.7rem;
+
+//gutter
+$xxxbig-gutter : 20rem;
+$xxbig-gutter : 7rem;
+$xbig-gutter : 3.4rem;
+$big-gutter : 1.7rem;
+$small-gutter: 1rem;
+
+// borders : 
+$main-border: 3px solid $light-brown;
+
+// Shadows
+$main-shadow: 10px 10px 0 $orange;
+
+// Radius
+$main-radius: 13px;

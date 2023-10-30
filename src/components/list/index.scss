@@ -1,0 +1,100 @@
+@import '../../assets/scss/vars';
+
+.skills-container {
+    position: relative;
+    #intersect {
+        position: sticky;
+        top: 100px;
+        width: 100%;
+    }
+}
+
+.skills {
+    // scroll-snap-type: y mandatory;
+    // height: 100%;
+    // overflow-y: scroll;
+    li {
+        position: relative;
+        margin-bottom: $small-gutter;
+        z-index: 0;
+        // scroll-snap-stop: always;
+        // scroll-snap-align: start;
+        display: block;
+        // justify-content: space-between;
+        // align-items: center;
+        .skill-title {
+            font-family: 'PT-Serif-bold';
+            font-size: $font-size-xbig;
+            opacity: 0;
+            position: relative;
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                margin: auto;
+                margin: auto;
+                left: -10px;
+                top: 0;
+                bottom: 0;
+                text-align: center;
+                width:  30px;
+                height: 30px;
+                background-color: $yellow;
+                border-radius: 50%;
+                z-index: -1;
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+        .skill-description {
+            font-size: $font-size-normal;
+            opacity: 0;
+        }
+        &.focus {
+
+            .skill-title {
+                // font-size: calc($font-size-xxbig);
+                // transition-property: font-size;
+                // transition-duration: 0.7s;
+                // // transition-delay: 0.5s;
+                animation: focus 1s ease-in;
+                @keyframes focus {
+                    0% { 
+                        font-size: $font-size-big;
+                    }
+                    // 30% { font-size: $font-size-xbig; }
+                    100%{ font-size: $font-size-xbig; }
+                }
+                opacity: 1;
+                transition-property: opacity;
+                transition-duration: 0.7s;
+                // transition-delay: 0.5s;
+                &:before {
+                    opacity: 60%;
+                    transition-property: opacity;
+                    transition-duration: 0.7s;
+                }
+            }
+            .skill-description {
+                opacity: 1;
+                font-size: $font-size-xnormal;
+                transition-property: opacity;
+                transition-duration: 0.7s;
+            }
+
+
+
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1564px) {
+    .skills {
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

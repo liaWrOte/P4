@@ -1,0 +1,39 @@
+@import '../../assets/scss/_vars.scss';
+
+
+.intro {
+    position: relative;
+    padding: $big-gutter;
+    position: relative;
+    height: 100%;
+    display: flex;
+    // flex-direction: column;
+    justify-content: space-between;
+    .intro-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .name {
+        font-family: 'Staatliches';
+        font-size: $font-size-xxbig;
+        color: $yellow;
+    }
+    strong {
+        font-family: 'PT-Serif-bold';
+        font-size: $font-size-xxbig;
+    }
+    .intro-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap : 10px;
+        span {
+            font-size: 15px;
+            margin-right: 5px;
+        }
+        img {
+           height: 18.33px; 
+        }
+    }
+}

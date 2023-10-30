@@ -1,0 +1,17 @@
+[user]
+        name = LiaWrOte
+        email = liaworkingonline@gmail.com
+
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+        ignorecase = true
+        precomposeunicode = true
+
+        sshCommand = "ssh -i ~/.ssh/id_lwo"
+
+[remote "origin"]
+        url = git@github.com:liaWrOte/P4.git
+        fetch = +refs/heads/*:refs/remotes/origin/*

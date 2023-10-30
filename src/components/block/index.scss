@@ -1,0 +1,126 @@
+@import '../../assets/scss/_vars.scss';
+
+
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 100%;
+}
+
+.main-block {
+    position: relative;
+    background-color: $white;
+    border: $main-border;
+    box-shadow: $main-shadow;
+    border-radius: $main-radius;
+    .block-content {
+        padding: $xbig-gutter;
+        padding-bottom: 200px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        // height: fit-content;
+        // max-height: 100%;
+        scroll-behavior: smooth !important;
+        -webkit-scroll-behavior: smooth !important;
+    }
+}
+
+.column-1 {
+    display: flex;
+}
+
+.flex-basis-1 {
+    // display: flex;
+    .small-height:nth-of-type(1) {
+        // flex-basis: 33%;
+    }
+    .small-height:nth-of-type(2) {
+        display: none;
+    }
+    // height: 100vh;
+}
+.flex-basis-2 {
+    flex-basis: 66%;
+}
+
+.small-height {
+    height: calc(100vh / 3 - ($big-gutter * 2));
+    margin-bottom: $big-gutter;
+    background-image: url('../../assets/images/noise.svg');
+}
+
+.big-height {
+    display: none;
+}
+
+.full-height {
+    height: calc(100vh - ($big-gutter * 2));
+    overflow-y: hidden;
+    background-image: url('../../assets/images/noise.svg');
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: $beige;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: $yellow;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+@media only screen and (min-width: 1314px) {
+    .column-1 {
+        display: block;
+    }
+    .flex-basis-1 {
+        display: flex;
+        flex-basis: 33%;
+        gap: $big-gutter;
+        .small-height:nth-of-type(1) {
+            flex-basis: 70%;
+        }
+        .small-height:nth-of-type(2) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .main-block {
+        position: relative;
+        background-color: $white;
+        border: $main-border;
+        box-shadow: $main-shadow;
+        border-radius: $main-radius;
+        .block-content {
+            padding: $xbig-gutter;
+            padding-bottom: 200px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            // height: fit-content;
+            // max-height: 100%;
+            scroll-behavior: smooth !important;
+            -webkit-scroll-behavior: smooth !important;
+        }
+    }
+    .big-height {
+        display: flex;
+        flex-basis: 100%;
+        height: calc(100vh - 100vh / 3 - ($big-gutter * 2));
+        overflow: hidden;
+    }
+    
+}
