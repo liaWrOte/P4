@@ -1,6 +1,11 @@
 @import '../../assets/scss/vars';
 
 .nav {
+    display: none;
+}
+
+@media only screen and (min-width: 1314px) {
+    .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,5 +36,6 @@
                 }
             }
         }
+    }
     }
 }

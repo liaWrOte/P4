@@ -16,7 +16,7 @@
     box-shadow: $main-shadow;
     border-radius: $main-radius;
     .block-content {
-        padding: $xbig-gutter;
+        padding: $big-gutter;
         padding-bottom: 200px;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -28,7 +28,12 @@
 }
 
 .column-1 {
-    display: flex;
+    display: block;
+}
+
+.small-height {
+    margin-bottom: $big-gutter;
+    background-image: url('../../assets/images/noise.svg');
 }
 
 .flex-basis-1 {
@@ -45,11 +50,7 @@
     flex-basis: 66%;
 }
 
-.small-height {
-    height: calc(100vh / 3 - ($big-gutter * 2));
-    margin-bottom: $big-gutter;
-    background-image: url('../../assets/images/noise.svg');
-}
+
 
 .big-height {
     display: none;
@@ -82,44 +83,37 @@
   }
 
 @media only screen and (min-width: 1314px) {
-    .column-1 {
-        display: block;
-    }
+    // .column-1 {
+    //     display: block;
+    // }
     .flex-basis-1 {
         display: flex;
         flex-basis: 33%;
         gap: $big-gutter;
+        .small-height {
+            height: calc(100vh / 3 - ($big-gutter * 2));
+        }
         .small-height:nth-of-type(1) {
+            height: calc(100vh / 3 - ($big-gutter * 2));
             flex-basis: 70%;
         }
         .small-height:nth-of-type(2) {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-basis: 30%;
         }
     }
 
     .main-block {
-        position: relative;
-        background-color: $white;
-        border: $main-border;
-        box-shadow: $main-shadow;
-        border-radius: $main-radius;
         .block-content {
             padding: $xbig-gutter;
-            padding-bottom: 200px;
-            overflow-y: scroll;
-            overflow-x: hidden;
-            // height: fit-content;
-            // max-height: 100%;
-            scroll-behavior: smooth !important;
-            -webkit-scroll-behavior: smooth !important;
         }
     }
     .big-height {
         display: flex;
         flex-basis: 100%;
-        height: calc(100vh - 100vh / 3 - ($big-gutter * 2));
+        height: calc(100vh - 100vh / 3 - $big-gutter);
         overflow: hidden;
     }
     

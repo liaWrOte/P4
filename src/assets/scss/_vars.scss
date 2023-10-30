@@ -36,13 +36,22 @@ $white: #ffffff;
 }
 
 //font-sizes
-$font-size-xxbig : 2.4rem;
-$font-size-xbig : 2.2rem;
-$font-size-big :1.8rem;
+$font-size-xxbig : 2rem;
+$font-size-xbig : 1.9rem;
+$font-size-big : 1.7rem;
 $font-size-xnormal : 1.6rem;
-$font-size-normal : 1.4rem;
+$font-size-normal : 1.1rem;
 $font-size-small : 1rem;
 $font-size-xsmall : 0.7rem;
+@media only screen and (min-width: 1314px) {
+    $font-size-xxbig : 2.4rem;
+    $font-size-xbig : 2.2rem;
+    $font-size-big :1.8rem;
+    $font-size-xnormal : 1.6rem;
+    $font-size-normal : 1.4rem;
+    $font-size-small : 1rem;
+    $font-size-xsmall : 0.7rem;
+}
 
 //gutter
 $xxxbig-gutter : 20rem;
@@ -55,7 +64,10 @@ $small-gutter: 1rem;
 $main-border: 3px solid $light-brown;
 
 // Shadows
-$main-shadow: 10px 10px 0 $orange;
+$main-shadow: 6px 6px 0 $orange;
+@media only screen and (min-width: 1314px) {
+    $main-shadow: 10px 10px 0 $orange;
+}
 
 // Radius
 $main-radius: 13px;

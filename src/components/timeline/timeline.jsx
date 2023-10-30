@@ -91,7 +91,6 @@ const Timeline = ({getTimelineData, getFormations, timelineDataExperience, timel
           // console.log('offset.y', offset.y);
           // console.log('midline', midline);
           // console.log(rect.y - offset.y < midline);
-          console.log(nodes[i].querySelector('.ring'));
           nodes[i].classList.toggle("active", rect.y - offset.y < midline);
           let sparkle = nodes[i].querySelector('.ring');
           sparkle.classList.toggle("active", rect.y - offset.y < midline);

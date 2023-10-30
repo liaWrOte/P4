@@ -22,12 +22,7 @@ const Nav = ({...props }) => {
   const scrollToSection = (section) => {
     let block = document.querySelector('#main');
     const element = document.getElementById(section);
-    const rect = element.getBoundingClientRect();
-    // block.scrollTo(0, (rect.top))
-    // window.scrollIntoView({ behavior: 'smooth' });
-    // setTimeout((e) => {
-      
-    // }, 1500)
+    block.scrollTo(0, (element.offsetTop - 100))
   };
 
   useEffect(() => {
