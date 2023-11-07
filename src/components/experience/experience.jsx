@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import './index.scss';
+import React from 'react';
 
 import Title from '../title/title';
 import Timeline from '../../containers/timeline';
 
-/**
- * Primary UI component for user interaction
- */
-const Experience = ({...props }) => {
+const Experience = () => {
 
   const TitleSpecs = [
     'Expériences',
@@ -22,18 +17,5 @@ const Experience = ({...props }) => {
     </section>
   );
 };
-
-Experience.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-
-};
-
-// Experience.defaultProps = {
-//   backgroundColor: null,
-
-// };
 
 export default Experience;

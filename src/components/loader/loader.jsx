@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import './index.scss';
 
-/**
- * Primary UI component for user interaction
- */
-const Loader = ({...props }) => {
-
+const Loader = () => {
   return (
     <div id="spinner">
 
@@ -26,18 +21,5 @@ const Loader = ({...props }) => {
     </div>
   );
 };
-
-Loader.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-
-};
-
-// Loader.defaultProps = {
-//   backgroundColor: null,
-
-// };
 
 export default Loader;

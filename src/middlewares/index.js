@@ -11,17 +11,7 @@ import {
 
 
 const mainMiddleware = (store) => (next) => (action) => {
-    // console.debug('middleware', store.action);
-
-    // console.log(next);
-    // console.log('middleware ', action);
-    // const config = {
-    //     headers: { Authorization: `Bearer ${tokenValue}` },
-    // console.log(action);
-    //   };
     switch (action.type) {
-
-
         case GET_TIMELINE_DATA:
             axios.get(`${apiUrl}/${action.value}?populate=*`)
             .then((response) => {

@@ -15,17 +15,10 @@
     border: $main-border;
     border-radius: $main-radius;
     box-shadow: $main-shadow;
-    // animation: open-small 1s ease-in-out;
-    // > * {
-    //     animation: reveal 1s ease-in-out;
-    // }
     .block-content {
         padding: $big-gutter;
-        // padding-bottom: 200px;
         overflow-y: scroll;
         overflow-x: hidden;
-        // height: fit-content;
-        // max-height: 100%;
         scroll-behavior: smooth !important;
         -webkit-scroll-behavior: smooth !important;
     }
@@ -41,20 +34,16 @@
 }
 
 .flex-basis-1 {
-    // display: flex;
     .small-height:nth-of-type(1) {
         height: 17vh;
     }
     .small-height:nth-of-type(2) {
         display: none;
     }
-    // height: 100vh;
 }
 .flex-basis-2 {
     flex-basis: 66%;
 }
-
-
 
 .big-height {
     display: none;
@@ -87,9 +76,6 @@
 }
 
 @media only screen and (min-width: 640px) {
-// .column-1 {
-//     display: block;
-// }
     .flex-basis-1 {
         display: flex;
         flex-direction: column;
@@ -98,17 +84,14 @@
         .small-height {
             height: -webkit-fill-available;
             margin-bottom: 0;
-            // animation: open-small 1s ease-in-out;
         }
         .small-height:nth-of-type(1) {
             height: -webkit-fill-available;
-            // flex-basis: 70%;
         }
         .small-height:nth-of-type(2) {
             display: flex;
             align-items: center;
             justify-content: center;
-            // flex-basis: 30%;
         }
     }
 
@@ -117,8 +100,6 @@
             padding: $xbig-gutter;
             overflow-y: scroll;
             overflow-x: hidden;
-            // height: fit-content;
-            // max-height: 100%;
             scroll-behavior: smooth !important;
             -webkit-scroll-behavior: smooth !important;
         }
@@ -135,9 +116,6 @@
 }
 
 @media only screen and (min-width: 1314px) {
-    // .column-1 {
-    //     display: block;
-    // }
     .flex-basis-1 {
         display: flex;
         flex-direction: row;
@@ -147,8 +125,6 @@
         height: auto;
         .small-height {
             height: calc(100vh / 3 - ($big-gutter * 2));
-            // flex-basis: 33%;
-            // animation: open-small 1s ease-in-out;
         }
         .small-height:nth-of-type(1) {
             height: calc(100vh / 3 - ($big-gutter * 2));

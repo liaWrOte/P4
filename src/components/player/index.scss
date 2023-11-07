@@ -3,9 +3,6 @@
 .player-container {
   display: flex;
   flex-direction: column;
-//   position: absolute;
-//   width: 150px;
-  // top: -100px;
   height: fit-content;
   color: $beige;
   justify-content: space-between;
@@ -26,9 +23,7 @@
     width: 194px;
     .title {
       font-size: 10px;
-      // text-overflow: ellipsis;
       white-space: nowrap;
-      // overflow: hidden;
       display: block;
       margin: 0 auto;
       text-align: center;

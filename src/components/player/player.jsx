@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect, useHasChanged } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useRef } from 'react';
 import './index.scss';
 
 // svg btn
@@ -43,7 +42,6 @@ const tracks = [
 
 const Player = () => {
 
-  
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio(tracks[currentTrackIndex].source));
@@ -55,7 +53,6 @@ const Player = () => {
     playerSvg.classList.add('playing');
     let playerContainer = document.getElementsByClassName('player-container')[0];
     playerContainer.classList.add('playing');
-    // playerSvg.classList.toggle('start');
   };
   
   const pause = () => {
@@ -98,14 +95,6 @@ const Player = () => {
     }
   };
 
-  function openPlayer() {
-    let player = document.getElementById('player');
-    player.classList.toggle('hide');
-
-    let playerSvg = document.getElementById('player-svg');
-    playerSvg.classList.toggle('start');
-  }
-
   return (
         <div className="player-container" id="player">
             <div className="player-svg-container">
@@ -115,13 +104,6 @@ const Player = () => {
                 <p className='title'>{tracks[currentTrackIndex].title}</p>
                 <p className='title'>{tracks[currentTrackIndex].author}</p>
             </div>
-            {/* <div className='cover-container'>
-                <img
-                src={tracks[currentTrackIndex].cover}
-                alt={`${tracks[currentTrackIndex].title} cover`}
-                className="cover"
-                />
-            </div> */}
             <div className="player-controls">
 
                 <img 
@@ -151,27 +133,7 @@ const Player = () => {
                 />
             </div>
         </div>
-
-
-
   );
-};
-
-Player.propTypes = {
-  /**
-   * Show items Player of firt level
-   */
-  displayPlayer: PropTypes.bool.isRequired,
-  /**
-   * Show items Player of second level
-   */
-  displayPlayerItem: PropTypes.bool,
-
-};
-
-Player.defaultProps = {
-  displayPlayer: false,
-  displayPlayerItem: false,
 };
 
 export default Player;

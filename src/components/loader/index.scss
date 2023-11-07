@@ -106,32 +106,20 @@
     to {transform: rotate(0deg) translate(150px) rotate(360deg);}
   }
   
-  /* Responsive tablette
-  /*=====================================*/
-  
   @media (max-width: 1100px) {
-  
     #spinner {
       padding-top: 25%;
     }
-  
-  
-  
   }
-  
-  
-  /* Responsive smartphone */
-  
+
   @media (max-width: 562px) {
-  
-  #spinner {
-      padding-top: 40%;
+    #spinner {
+        padding-top: 40%;
+      }
+    
+    #loading {
+      margin-bottom: 50px;
     }
-  
-  #loading {
-    margin-bottom: 50px;
-  }
-  
   }
   
   

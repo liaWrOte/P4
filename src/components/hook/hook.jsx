@@ -1,42 +1,27 @@
-import React, { useEffect, useId, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './index.scss';
 
-import portrait from '../../assets/images/me.jpg'
-
-/**
- * Primary UI component for user interaction
- */
-const Hook = ({getHookData, HookData, ...props }) => {
+const Hook = ({getHookData, HookData}) => {
 
   useEffect(() => {
-
     // Fetch Data
     const fetchData = async() => {
       await getHookData();
     }
     fetchData();
-
-    
   }, [])
   
   const [hasSparkle, setHasSparkle] = useState(false);
 
   useEffect(() => {
-    // Animate sparkle
     let block = document.querySelector('#main');
     let sparkle = document.querySelector('#sparkle');
     let circle = document.querySelector('#hook');
-    // let circleBefore = window.getComputedStyle('circle', :b)
-
-    // console.log(sparkle);
   
     block.addEventListener('scroll', (event) => {
       if (sparkle && !sparkle.classList.contains('sparkle-animate')) {
         sparkle.classList.add('sparkle-animate');
-        // console.log(block);
-        // block.scrollTop += sparkle.offsetTop;
-        // console.log(sparkle.offsetTop);
       }
       if (circle && !circle.classList.contains('before-animated')) {
         circle.classList.add('before-animated');
@@ -49,7 +34,6 @@ const Hook = ({getHookData, HookData, ...props }) => {
   if (HookData) {
     return (
       <section id='hook'>
-        {/* <img src={portrait} alt="" class="portrait"/> */}
         <span className="hook-title">Bienvenue !</span>
         <div id="sparkle" ref={setHasSparkle}></div>
         <div className="hook-intro">
@@ -71,15 +55,14 @@ const Hook = ({getHookData, HookData, ...props }) => {
 
 Hook.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * Fetch hook Data from strapi
    */
-  primary: PropTypes.bool,
+  getHookData: PropTypes.func,
+  /**
+   * Hook Data array from strapi
+   */
+  HookData: PropTypes.array,
 
 };
-
-// Hook.defaultProps = {
-//   backgroundColor: null,
-
-// };
 
 export default Hook;

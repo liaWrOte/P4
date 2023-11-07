@@ -1,14 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 import './index.scss';
 
-import Title from '../title/title';
-import { act } from '@react-three/fiber';
 
-/**
- * Primary UI component for user interaction
- */
 const List = ({getListData, listSkills, listInterests, ...props }) => {
 
     // Data for title
@@ -45,44 +39,27 @@ const List = ({getListData, listSkills, listInterests, ...props }) => {
         setMyRefIsLoaded(true)
     };
 
-    // const [hasDelay, setDelay] = useState(true);
     
     useEffect(() => {
-        // console.log('ICIIIII', myRef.current)
         if (myRef.current.length > 0) {
-
             let options = {
                 root: document.querySelector('#main'),
                 rootMargin: '0px 0px -20% 0px',
                 threshold: 1,
             }
-            
-            let actualEntry = null;
             const observer = new IntersectionObserver((entries) => {
-                // console.log(entry[0].target);
                 entries.forEach(function (entry) {
-                    // setTimeout(() => {
-                            if(entry.isIntersecting && !entry.target.classList.contains('focus')) {
-                            // setTimeout(() => {
-                                entry.target.classList.add('focus');
-                                observer.unobserve(entry.target);
-                            // }, '500')            
-                        } else {
-                            
-                        }
-                    })
+                    if(entry.isIntersecting && !entry.target.classList.contains('focus')) {
+                        entry.target.classList.add('focus');
+                        observer.unobserve(entry.target);
+                    }
+                })
             }, options)
-       
     
             for (const entry of myRef.current) {
-                // const { ref, inView, entry } = useInView({
-                //     /* Optional options */
-                //     threshold: 0,
-                //   })
                 observer.observe(entry);
             }
         }
-
     }, [myRefIsLoaded])
 
 
@@ -109,15 +86,17 @@ const List = ({getListData, listSkills, listInterests, ...props }) => {
 
 List.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * Fetch list data from strapi
    */
-  primary: PropTypes.bool,
-
+  getListData: PropTypes.func,
+  /**
+   * Skills list data from strapi
+   */
+  listSkills: PropTypes.array,
+  /**
+   * Interests list data from strapi
+   */
+  listInterests: PropTypes.array
 };
-
-// List.defaultProps = {
-//   backgroundColor: null,
-
-// };
 
 export default List;

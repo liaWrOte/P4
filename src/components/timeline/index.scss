@@ -12,14 +12,6 @@
   display: table;
   clear: both;
 }
-
-/* -------------------------------- 
-
-Main components 
-
--------------------------------- */
-
-
 .cd-timeline {
   position: relative;
   padding: 2em 0;
@@ -34,16 +26,6 @@ Main components
   height: calc(100% + 1px);
   width: 4px;
   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(212,85,20,1) 10%, rgba(212,85,20,1) 90%, rgba(254,254,254,0) 100%);
-}
-.yellow-line {
-  // content: '';
-  height: 0px;
-  position: absolute;
-  top: 0;
-  left: 25px;
-  // height: 10%;
-  width: 4px;
-  background: $yellow;
 }
 .cd-timeline-block {
   position: relative;
@@ -98,7 +80,7 @@ Main components
     margin-top: 3em;
     margin-bottom: 3em;
   }
-  .orange-line, .yellow-line {
+  .orange-line {
     display: block;
     left: 50%;
     margin-left: -2px;
@@ -109,7 +91,6 @@ Main components
     left: 50%;
     margin-left: -10px;
     margin-top: 10px;
-    /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
   }

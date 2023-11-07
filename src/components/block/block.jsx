@@ -1,7 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useInView } from "react-intersection-observer";
-
-import PropTypes from 'prop-types';
+import React from 'react';
 import './index.scss';
 
 import Nav from '../nav/nav';
@@ -15,26 +12,7 @@ import Animation from '../animation/animation';
 import Footer from '../footer/footer';
 import Player from '../player/player';
 
-/**
- * Primary UI component for user interaction
- */
 const Block = ({...props }) => {
-
-  // Circle animation
-  // if (props.content === 'main') {
-  //   const circle = document.querySelector('.hook:after');
-  //   console.log(circle);
-  // }
-
-  // const { ref, inView } = useInView({
-  //   threshold: 0
-  // });
-
-
-
-
-  
-
   return (
     <div className={`main-block ${props.grid}`}>
       
@@ -65,18 +43,5 @@ const Block = ({...props }) => {
     </div>
   );
 };
-
-Block.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-
-};
-
-// Block.defaultProps = {
-//   backgroundColor: null,
-
-// };
 
 export default Block;

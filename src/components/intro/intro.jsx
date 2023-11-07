@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import './index.scss';
 
 
 import linkedIn from '../../assets/images/linkedIn.svg'
 import download from '../../assets/images/download.svg'
 
-/**
- * Primary UI component for user interaction
- */
-const Intro = ({...props }) => {
-
+const Intro = () => {
   return (
     <div className="intro">
       <div className='intro-description'>
@@ -35,18 +30,5 @@ const Intro = ({...props }) => {
     </div>
   );
 };
-
-Intro.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-
-};
-
-// Intro.defaultProps = {
-//   backgroundColor: null,
-
-// };
 
 export default Intro;

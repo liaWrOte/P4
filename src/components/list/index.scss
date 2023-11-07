@@ -10,18 +10,11 @@
 }
 
 .skills {
-    // scroll-snap-type: y mandatory;
-    // height:50%;
-    // overflow-y: scroll;
     li {
         position: relative;
         margin-bottom: $small-gutter;
         z-index: 0;
-        // scroll-snap-stop: always;
-        // scroll-snap-align: start;
         display: block;
-        // justify-content: space-between;
-        // align-items: center;
         .skill-title {
             font-family: 'PT-Serif-bold';
             font-size: $font-size-xbig;
@@ -52,46 +45,31 @@
             text-align: left;
         }
         &.focus {
-
             .skill-title {
-                // font-size: calc($font-size-xxbig);
-                // transition-property: font-size;
-                // transition-duration: 0.7s;
-                // // transition-delay: 0.5s;
                 animation: focus 1s ease-in;
                 @keyframes focus {
                     0% { 
                         opacity: 0;
                         padding-top: 15px;
                     }
-                    // 30% { font-size: $font-size-xbig; }
                     100% { 
                         padding-top: 0;
                         opacity: 1;
-                        // font-size: $font-size-xbig;
                     }
                 }
                 opacity: 1;
-                // padding-top: 0;
                 font-size: $font-size-big;
                 transition-property: opacity;
                 transition-duration: 0.7s;
-                // transition-delay: 0.5s;
                 &:before {
-                    // opacity: 40%;
                     transition-property: opacity;
-                    // transition-duration: 0.7s;
                     animation: chip 0.7s ease-in 0.5s;
                     @keyframes chip {
                         0% { 
                             opacity: 0.7;
-                            // padding-top: 15px;
                         }
-                        // 30% { font-size: $font-size-xbig; }
                         100% { 
-                            // padding-top: 0;
                             opacity: 0.4;
-                            // font-size: $font-size-xbig;
                         }
                     }
                 }
@@ -102,9 +80,6 @@
                 transition-property: opacity;
                 transition-duration: 0.7s;
             }
-
-
-
         }
     }
 }

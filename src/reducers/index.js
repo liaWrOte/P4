@@ -5,7 +5,6 @@ import {
 } from '../actions/index';
 
 const initialState = {
-  // Define your initial state here
   timelineDataExperience: [],
   timelineDataEducation: [],
   listSkills: [],
@@ -14,10 +13,7 @@ const initialState = {
 };
 
 const rootReducer = (state = initialState, action) => {
-
-  // console.log('action', action);
   switch (action.type) {
-    // Define your reducer cases here
 
     case SET_TIMELINE_DATA: {
       if (action.value.content == "experiences")
@@ -33,7 +29,6 @@ const rootReducer = (state = initialState, action) => {
     }
 
     case SET_LIST_DATA: {
-      console.log('ACTION', action);
       if (action.value.content == "skills")
       return {
         ...state,

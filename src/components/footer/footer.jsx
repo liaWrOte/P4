@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import './index.scss';
 import '../timeline/index.scss';
 
-/**
- * Primary UI component for user interaction
- */
-const Footer = ({...props }) => {
+const Footer = () => {
 
   const portfolioSkills = [
     {
@@ -79,18 +75,5 @@ const Footer = ({...props }) => {
     </div>
   );
 };
-
-Footer.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-
-};
-
-// Footer.defaultProps = {
-//   backgroundColor: null,
-
-// };
 
 export default Footer;

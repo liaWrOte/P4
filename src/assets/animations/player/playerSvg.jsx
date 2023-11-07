@@ -1,15 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import './index.scss';
 
 const PlayerSvg = ({...props}) => {
-
-  // [is]
-
-  // if (props.isPlaying) {
-
-  // }
   return (
     <svg
       id="player-svg"
@@ -36,23 +29,6 @@ const PlayerSvg = ({...props}) => {
       </g>
     </svg>
   );
-};
-
-PlayerSvg.propTypes = {
-  /**
-   * Show items playerSvg of firt level
-   */
-  displayplayerSvg: PropTypes.bool.isRequired,
-  /**
-   * Show items playerSvg of second level
-   */
-  displayplayerSvgItem: PropTypes.bool,
-
-};
-
-PlayerSvg.defaultProps = {
-  displayplayerSvg: false,
-  displayplayerItem: false,
 };
 
 export default PlayerSvg;

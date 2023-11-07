@@ -1,27 +1,22 @@
 @import '../../assets/scss/vars';
 
-// @media only screen and (min-width: 1314px) {
-    .footer {
-        // display: flex;
-        // align-items: center;
-        // justify-content: space-between;
-        margin-top: $xxxbig-gutter;
-        margin-left: calc($xbig-gutter * -1);
-        margin-right: calc($xbig-gutter * -1);
-        margin-bottom: calc($small-gutter * -1);
-        padding-top: $small-gutter;
-        padding-left: $xbig-gutter;
-        padding-right: $xbig-gutter;
-        border-top: $main-border;
-        position: relative;
-        top: 0;
-        z-index: 20;
-        p {
-            margin-bottom: $small-gutter;
-            font-size: $font-size-small;
-        }
+.footer {
+    margin-top: $xxxbig-gutter;
+    margin-left: calc($xbig-gutter * -1);
+    margin-right: calc($xbig-gutter * -1);
+    margin-bottom: calc($small-gutter * -1);
+    padding-top: $small-gutter;
+    padding-left: $xbig-gutter;
+    padding-right: $xbig-gutter;
+    border-top: $main-border;
+    position: relative;
+    top: 0;
+    z-index: 20;
+    p {
+        margin-bottom: $small-gutter;
+        font-size: $font-size-small;
     }
-// }
+}
 
 @media only screen and (min-width: 1314px) {
     .footer {

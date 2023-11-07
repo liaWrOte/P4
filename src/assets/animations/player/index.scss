@@ -70,10 +70,6 @@
   &.playing {
     position: relative;
     #disk {
-        // animation-name: bounce;
-        // animation-duration: 1.5s;
-        // animation-iteration-count: infinite;
-        // transition: transform 0.2s;
         image {
           display: block;
           position: relative;
@@ -91,7 +87,6 @@
       }
     }
 }
-
 
 @keyframes bounce {
   0% {

@@ -13,7 +13,7 @@ const store = configureStore({
         }).concat(mainMiddleware),
 })
 
-console.log('store ', store.getState());
+// console.log('store ', store.getState());
 
 
 export default store;
