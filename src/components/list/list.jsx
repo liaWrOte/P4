@@ -44,11 +44,12 @@ const List = ({getListData, listSkills, listInterests, ...props }) => {
         }
         setMyRefIsLoaded(true)
     };
+
+    // const [hasDelay, setDelay] = useState(true);
     
     useEffect(() => {
         // console.log('ICIIIII', myRef.current)
         if (myRef.current.length > 0) {
-            
 
             let options = {
                 root: document.querySelector('#main'),
@@ -60,28 +61,16 @@ const List = ({getListData, listSkills, listInterests, ...props }) => {
             const observer = new IntersectionObserver((entries) => {
                 // console.log(entry[0].target);
                 entries.forEach(function (entry) {
-                    // console.log(entry);
                     // setTimeout(() => {
                             if(entry.isIntersecting && !entry.target.classList.contains('focus')) {
-                            setTimeout(() => {
+                            // setTimeout(() => {
                                 entry.target.classList.add('focus');
                                 observer.unobserve(entry.target);
-                            }, '500')
-                            // if(!entry.isIntersecting && entry.target.classList.contains('focus')) {
-                            //     console.log('remove');
-                            //     entry.target.classList.remove('focus');
-                            // }                
+                            // }, '500')            
+                        } else {
+                            
                         }
                     })
-                // }, '500')
-                // if (entry[0].isIntersecting && !entry[0].target.classList.contains('focus') && entry[0].isIntersecting !== actualEntry) {
-                //     console.log(entry[0]);
-                //     actualEntry = entry[0].target;
-                // }
-                // if (!entry[0].isIntersecting && entry[0].target.classList.contains('focus')) {
-                //     entry[0].target.classList.remove('focus');
-
-                // }
             }, options)
        
     

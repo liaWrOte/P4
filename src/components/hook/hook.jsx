@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useId, useState } from 'react';
 import PropTypes from 'prop-types';
 import './index.scss';
 
@@ -32,10 +32,13 @@ const Hook = ({getHookData, HookData, ...props }) => {
     // console.log(sparkle);
   
     block.addEventListener('scroll', (event) => {
-      if (sparkle && ! sparkle.classList.contains('sparkle-animate')) {
+      if (sparkle && !sparkle.classList.contains('sparkle-animate')) {
         sparkle.classList.add('sparkle-animate');
+        // console.log(block);
+        // block.scrollTop += sparkle.offsetTop;
+        // console.log(sparkle.offsetTop);
       }
-      if (circle && ! circle.classList.contains('before-animated')) {
+      if (circle && !circle.classList.contains('before-animated')) {
         circle.classList.add('before-animated');
       }
     })
@@ -43,22 +46,22 @@ const Hook = ({getHookData, HookData, ...props }) => {
   }, [hasSparkle])
 
 
-  if (HookData.attributes) {
+  if (HookData) {
     return (
       <section id='hook'>
         {/* <img src={portrait} alt="" class="portrait"/> */}
         <span className="hook-title">Bienvenue !</span>
         <div id="sparkle" ref={setHasSparkle}></div>
         <div className="hook-intro">
-          <div className="hook-content">
-            {HookData.attributes.Intro}
-          </div>
-          <div className="hook-content">
-            {HookData.attributes.Intro2}
-          </div>
-          <div className="hook-content">
-            {HookData.attributes.Intro3}
-          </div>
+          {HookData.map((item, id) => {
+            let intro = item.attributes.description;
+            const parser = new DOMParser();
+            let introHTML = parser.parseFromString(intro, "text/html").body.innerHTML;
+            return (
+              <div className="hook-content" key={`intro-${id}`} dangerouslySetInnerHTML={{__html: introHTML}}>
+              </div>
+            )
+          })}
         </div>
       </section>
     )

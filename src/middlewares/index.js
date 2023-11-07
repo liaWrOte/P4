@@ -45,9 +45,8 @@ const mainMiddleware = (store) => (next) => (action) => {
             break;
 
         case GET_HOOK_DATA:
-            axios.get(`${apiUrl}/intro`)
+            axios.get(`${apiUrl}/intros`)
             .then((response) => {
-                // console.log(response);
                 store.dispatch(setHookData(response.data.data));
             })
             .catch((error) => {

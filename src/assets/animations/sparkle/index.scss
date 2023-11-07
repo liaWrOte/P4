@@ -2,7 +2,10 @@
 
 .ring-svg {
     overflow: visible;
-    position: relative;
+    position: absolute;
+
+    left: -3.1px;
+    top: -2.5px;
     .ring {
         cx: 10px;
         cy: 10px;
@@ -21,4 +24,12 @@
 	0%, 74% {r: 0; opacity: 1;}
 	30% {r: 20; opacity: 1;}
 	100% {r: 0; opacity: 0;} 
+}
+
+@media only screen and (min-width: 1385px) {
+    .ring-svg {
+        position: relative;
+        left: auto;
+        top: auto;
+    }
 }

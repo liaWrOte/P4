@@ -1,19 +1,6 @@
 @import '../../scss/vars';
 
 
-#player-svg {
-  position: relative;
-  width: 50%;
-  image {
-    display: block;
-    // width: 100%;
-  }
-}
-
-// #disk {
-//   position: relative;
-// }
-
 .cls-1 {
   fill: #5d161a;
   stroke: #5d161a;
@@ -63,6 +50,11 @@
 
 #player-svg {
   overflow: visible;
+  position: relative;
+  width: 30%;
+  image {
+    display: block;
+  }
   #reader {
     right: 5px;
     transform: rotate(0deg) translateX(-10px);
@@ -138,4 +130,13 @@
     transform: rotate(360deg);
   }
 }
+
+
+@media only screen and (min-width: 1314px) {
+  #player-svg {
+    width: 50%;
+  }
+}
+
+
 

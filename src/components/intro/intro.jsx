@@ -18,7 +18,7 @@ const Intro = ({...props }) => {
         <p className="name">
           Sandrine M'ZE
         </p>
-        <p>Développeuse front-end</p>
+        <p>Développeuse<br/>front-end</p>
         <strong>créative</strong>
         </h1>
         <div className='intro-links'>

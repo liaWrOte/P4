@@ -12,7 +12,7 @@ import Education from '../education/education';
 import Intro from '../intro/intro';
 import Hook from '../../containers/hook'
 import Animation from '../animation/animation';
-import End from '../../containers/end';
+import Footer from '../footer/footer';
 import Player from '../player/player';
 
 /**
@@ -54,7 +54,7 @@ const Block = ({...props }) => {
           <Skills />
           <Education/>
           <Interests />
-          <End />
+          <Footer />
         </div>
       </div>
       }
