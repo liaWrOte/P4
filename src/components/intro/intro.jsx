@@ -24,10 +24,9 @@ const Intro = () => {
             <a href="https://github.com/liaWrOte">
               <img src={github} alt="Lien vers Github" target="_blank"/>
             </a>
-          <span className='separator'>|</span>
           </div>
           <div>
-            <a href="">
+            <a href="" className='cv'>
               <span>CV</span>
               <img src={download} alt="Télécharger mon CV" target="_blank"/>
             </a>

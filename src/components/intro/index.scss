@@ -37,13 +37,16 @@
             gap: 10px;
         }
         span {
-            font-size: 15px;
+            font-size: 14px;
             margin-right: 5px;
             font-family: 'arial';
             font-weight: bold;
+            display: flex;
         }
-        .separator {
-            display: none;
+        .cv {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
         }
         img {
            height: 18.33px; 
@@ -64,8 +67,8 @@
         }
         .intro-links {
             width: 100%;
-            .separator {
-                display: block;
+            span {
+                display: flex;
             }
         }
     }
