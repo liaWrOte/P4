@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-import linkedIn from '../../assets/images/linkedIn.svg';
+import linkedIn from '../../assets/images/linkedin.svg';
 import download from '../../assets/images/download.svg';
 import github from '../../assets/images/github.svg';
 
