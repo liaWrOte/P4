@@ -45,6 +45,7 @@ const Player = () => {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(new Audio(tracks[currentTrackIndex].source));
+  audioRef.current.volume = 0.5;
   
   const play = () => {
     setIsPlaying(true);
