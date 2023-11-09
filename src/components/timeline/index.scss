@@ -214,6 +214,9 @@
   .cd-timeline-block.artwai .cd-timeline-content {
     float: left;
   }
+  .cd-timeline-block.cogit .cd-timeline-content {
+    float: right;
+  }
   .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
     top: 24px;
     left: auto;
