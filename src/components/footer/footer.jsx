@@ -59,6 +59,16 @@ const Footer = () => {
       'id' : 10,
       'skill' : 'Trello',
       'type' : 'soft-skill'
+    },
+    {
+      'id' : 11,
+      'skill' : 'Netlify',
+      'type' : 'tool'
+    },
+    {
+      'id' : 12,
+      'skill' : 'Heroku',
+      'type' : 'tool'
     }
   ]
 
