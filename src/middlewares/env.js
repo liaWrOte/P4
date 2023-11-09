@@ -1,1 +1,1 @@
-export const apiUrl = 'http://localhost:1337/api';
+export const apiUrl = 'https://backendportfolio-792b3f3a0f40.herokuapp.com/api';
