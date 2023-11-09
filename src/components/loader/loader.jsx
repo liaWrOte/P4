@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.scss';
 
 const Loader = () => {
+
+  const [haveLoadingText, setLoadingText] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoadingText(false);
+    }, 7000)
+  }, [])
+
   return (
     <div id="spinner">
 
-        <div id="loader">
+        {/* <div id="loader"> */}
         
             <div id="loading">
                 <div className="circle" id="first"></div>
@@ -13,11 +22,11 @@ const Loader = () => {
                 <div className="circle"  id="third"></div>
             </div>
             
-            <div>
-                <h1>CHARGEMENT</h1>
-            </div>
+            {haveLoadingText && 
+              <span>CHARGEMENT</span>
+            }
         
-        </div>
+        {/* </div> */}
     </div>
   );
 };

@@ -3,6 +3,9 @@
 
 html {
     position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
 }
 body {
     position: relative;
@@ -12,7 +15,8 @@ body {
     font-family: 'PT-Serif';
     font-size: $font-size-normal;
     -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
 }
 
 p, li, a {
