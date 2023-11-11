@@ -10,12 +10,14 @@
         font-family: "staatliches";
         margin-bottom: $big-gutter;
         font-size: $font-size-xxbig;
-        color: $orange;
+        color: $yellow;
         text-align: center;
+
     }
     .hook-intro {
         display: flex;
         flex-direction: column;
+        margin-top: 200px;
         .hook-content {
             margin-top: $small-gutter;
             width: 100%;
@@ -34,10 +36,10 @@
         margin: auto;
         margin: auto;
         left: 50%;
-        top: 50%;
+        top: 27%;
         text-align: center;
-        width: 450px;
-        height: 450px;
+        width: 350px;
+        height: 350px;
         background-image: url('../../assets/images/me.jpg');
         background-size: cover;
         background-position: center;
@@ -47,16 +49,17 @@
     }
     &.before-animated {
         &:before {
-            animation: pulse 1s ease-in-out;
+            animation: pulse 1s ease-out;
             @keyframes pulse {
                 0% { transform: translate(-50%, -50%) scale(0.7); }
-                5% { transform: translate(-50%, -50%) scale(0.4); }
-                80% { transform: translate(-50%, -50%) scale(1.2); }
-                95%{ transform: translate(-50%, -50%) scale(0); }
-                100%{ transform: translate(-50%, -50%) scale(0.5); }
+                15% { transform: translate(-50%, -50%) scale(0.5); }
+                20% { transform: translate(-50%, -50%) scale(0.9); }
+                95%{ transform: translate(-50%, -50%) scale(0.5); }
+                100%{ transform: translate(-50%, -50%) scale(0.7); }
             }  
         }
     }
+
     #sparkle {
         display: block;
         width: 5px;
@@ -66,9 +69,9 @@
         left: 0;
         right: 0;
         margin: auto;
-        top: 300px;
+        top: 225px;
         opacity: 1;
-        z-index: -1;
+        z-index: -2;
 
         &.sparkle-animate {
             animation: sparkle 0.7s ease-in-out 0.5s;
@@ -94,7 +97,7 @@
     #hook {
         .hook-intro {
             .hook-content {
-                width: 50%;
+                // width: 50%;
                 &:nth-of-type(even) {
                     align-self: flex-end;
                 }
