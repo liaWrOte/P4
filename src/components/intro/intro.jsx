@@ -4,6 +4,7 @@ import './index.scss';
 import linkedIn from '../../assets/images/linkedin.svg';
 import download from '../../assets/images/download.svg';
 import github from '../../assets/images/github.svg';
+import resume from '../../assets/resume/sandrine_mze_creative_developer_resume.pdf'
 
 const Intro = () => {
   return (
@@ -26,7 +27,7 @@ const Intro = () => {
             </a>
           </div>
           <div>
-            <a href="" className='cv'>
+            <a href={resume} className='cv' target="_blank">
               <span>CV</span>
               <img src={download} alt="Télécharger mon CV" target="_blank"/>
             </a>
